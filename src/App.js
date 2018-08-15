@@ -8,7 +8,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      players: [],
+      players: [
+        {
+          teamName: 'Bears',
+          firstName: 'Steven',
+          lastName: 'Shit',
+        },
+        {
+          teamName: 'Bears',
+          firstName: 'Frank',
+          lastName: 'Idiot',
+        }
+      ],
       substitutes: []
     }
   }
@@ -18,7 +29,7 @@ class App extends Component {
       <div className="app">
         <h2>Blue Star Sports Team Manager</h2>
         <PlayerForm />
-        <TeamInfo />
+        <TeamInfo players={this.state.players} />
       </div>
     );
   }

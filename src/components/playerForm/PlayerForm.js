@@ -13,13 +13,18 @@ class PlayerForm extends Component {
   }
 
   addProperty = (event) => {
+    const { name, value } = event.target;
     const rando = randomString.generate(6)
-    const uniqueKey = `${event.target.name}-${event.target.value}`;
-    this.setState({ unique: uniqueKey })
+    const uniqueKey = `${name}-${value}`;
+    this.setState({ [uniqueKey]: true, 'number': rando })
+  }
+
+  playerCheck = () => {
+    
   }
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className='create-form'>
         <input 
@@ -37,10 +42,11 @@ class PlayerForm extends Component {
         <input 
           className='last-name player-input' 
           placeholder='Enter Players Last Name'
+          onChange={this.addProperty}
           name='last'
         />
         <button 
-          className='submit-btn' onSubmit={this.addProperty}>
+          className='submit-btn' onSubmit={this.setPlayer}>
             Submit Player
           </button>
       </div>
