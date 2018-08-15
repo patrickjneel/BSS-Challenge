@@ -1,4 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: unset;
+}
+
 .app {
+  background-color: #5239f6;
   text-align: center;
+  
+}
+
+h2 {
+  color: white;
+  font-size: 42px;
+  padding: 20px 0px;
 }
 

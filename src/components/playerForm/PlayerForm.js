@@ -13,7 +13,7 @@ class PlayerForm extends Component {
   }
 
   handleChange = (event) => {
-    console.log(event.target.value)
+    console.log(event.target.name)
   }
 
   render() {
@@ -23,14 +23,17 @@ class PlayerForm extends Component {
           className='team-name player-input' 
           placeholder='Enter Team Name'
           onChange={this.handleChange}
+          name='team'
         />
         <input 
           className='first-name player-input' 
           placeholder='Enter Players First Name'
+          name='first'
         />
         <input 
           className='last-name player-input' 
           placeholder='Enter Players Last Name'
+          name='last'
         />
         <button className='submit-btn'>Submit Player</button>
       </div>
