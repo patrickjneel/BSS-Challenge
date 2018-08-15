@@ -1,19 +1,19 @@
 import React from 'react';
 
-const TeamInfo = ({players}) => {
+const TeamInfo = ({active}) => {
 
-  const displayTeam = players.map((player, index) => {
+  const displayTeam = active.map((player, index) => {
     return (
       <div className='card' key={index}>
-        <h3>{player.teamName}</h3>
-        <h4>{player.firstName}</h4>
-        <h4>{player.lastName}</h4>
+        <h3>Team Name: {player.teamName}</h3>
+        <h4>First-Name: {player.firstName}</h4>
+        <h4>Last Name: {player.lastName}</h4>
       </div>
     )
   })
 
   return (
-    <div>
+    <div className='team-info'>
       {displayTeam}
     </div>
   )

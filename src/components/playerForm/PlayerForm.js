@@ -1,30 +1,24 @@
 import React, { Component} from 'react';
-import randomString from 'randomstring';
 import './player-form.css';
 
 
 class PlayerForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      unique: {
-      }
+      unique: {}
     }
   }
 
   addProperty = (event) => {
     const { name, value } = event.target;
-    const rando = randomString.generate(6)
     const uniqueKey = `${name}-${value}`;
-    this.setState({ [uniqueKey]: true, 'number': rando })
+    this.setState({ [uniqueKey]: true })
   }
 
-  playerCheck = () => {
-    
-  }
 
   render() {
-    // console.log(this.state)
+    
     return (
       <div className='create-form'>
         <input 
@@ -46,7 +40,7 @@ class PlayerForm extends Component {
           name='last'
         />
         <button 
-          className='submit-btn' onSubmit={this.setPlayer}>
+          className='submit-btn' onClick={() => this.props.addPlayer(this.state)}>
             Submit Player
           </button>
       </div>
