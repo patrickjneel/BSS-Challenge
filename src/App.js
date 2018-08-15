@@ -3,6 +3,7 @@ import PlayerForm from './components/playerForm/PlayerForm';
 import TeamInfo from './components/teamInformation/TeamInformation';
 import './App.css';
 
+
 class App extends Component {
   constructor() {
     super();
