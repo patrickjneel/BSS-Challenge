@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   margin: unset;
 }
 
-.app {
+.app-top {
   background-color: #5239f6;
   text-align: center;
   
@@ -13,5 +14,14 @@ h2 {
   color: white;
   font-size: 42px;
   padding: 20px 0px;
+}
+
+.app-bottom {
+  background: url('./assets/field.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  opacity: 0.95;
+  width: 100%;
 }
 

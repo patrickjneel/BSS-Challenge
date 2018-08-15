@@ -6,19 +6,20 @@ class PlayerForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      unique: {}
+      team: '',
+      first: '',
+      last: ''
     }
   }
 
   addProperty = (event) => {
     const { name, value } = event.target;
-    const uniqueKey = `${name}-${value}`;
-    this.setState({ [uniqueKey]: true })
+    this.setState({ [name]: value })
   }
 
 
   render() {
-    
+    console.log(this.state)
     return (
       <div className='create-form'>
         <input 
@@ -40,7 +41,9 @@ class PlayerForm extends Component {
           name='last'
         />
         <button 
-          className='submit-btn' onClick={() => this.props.addPlayer(this.state)}>
+          className='submit-btn' 
+          onClick={() => this.props.addPlayer(this.state)}
+        >
             Submit Player
           </button>
       </div>
